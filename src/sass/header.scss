@@ -1,0 +1,47 @@
+@use "/src/sass/variables.scss" as *;
+
+.header {
+    &__title {
+        display: block;
+        width: 324px;
+        height: 37px;
+        font-family: Roboto Condensed;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 100%;
+
+        span {
+            color: $brown;
+            font-size: 29px;
+            font-weight: 700;
+        }
+
+
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+    &__choose {
+        display: flex;
+        gap: 8px;
+
+        a {
+            display: block;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+        }
+       
+    }
+    &__characters{
+        color: $brown;
+    }
+    &__comics{
+        color: $dark;
+    }
+}
