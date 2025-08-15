@@ -11,6 +11,7 @@
         align-items: center;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        right: 200px;
     }
 
     &__card {
@@ -19,19 +20,23 @@
         color: white;
         // padding: 10px;   
         text-align: center;
-        width: 200px;
+        width: 250px;
         height: 321px;
 
 
         img {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
 
         }
 
         h3 {
             margin-top: 10px;
             font-size: 18px;
+        }
+
+        &:hover {
+            transform: scale(105%);
         }
     }
 
@@ -43,7 +48,9 @@
         background: $light;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
         top: 0;
-        right: -70%;
+        // right: 16%;
+        transform: translateY(58%);
+
 
         h2 {
             margin-bottom: 10px;
@@ -63,7 +70,32 @@
             }
         }
 
+        &-text {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            padding-top: 10px;
+            padding-inline: 20px;
+        }
+        &-wrapper {
+          position: relative;
+        }
     }
+
+    &__search-wrapper {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inset: 0;
+        // right: 0%;
+        // bottom: 8%;
+        width: 425px;
+        height: 127px;
+    }
+
+
+
 }
 
 .character {

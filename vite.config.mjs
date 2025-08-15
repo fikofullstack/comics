@@ -11,7 +11,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, "index.html"),
-				catalog: "",
+				comics: resolve(__dirname, "comics.html"),
 				about: "",
 				blog: "",
 			},

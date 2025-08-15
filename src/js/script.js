@@ -1,6 +1,5 @@
 import "/src/sass/style.scss";
 const characters = [
-  
     {
     id: 1,
     name: "Abyss",
@@ -137,9 +136,28 @@ const characters = [
 const listContainer = document.querySelector('.catalog__list');
 const infoContainer = document.querySelector('.catalog__info');
 
+let allCharacters = [...characters]
+
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', function(){
+    listContainer.innerHTML = '';
+
+    const searchText = searchInput.value
+
+    allCharacters = characters.filter(function(character) {
+      return character.name.toLowerCase().includes(searchText.toLowerCase())
+    })
+
+    console.log(allCharacters)
+    renderCards();
+
+}
+)
 // Функция отрисовки карточек
 function renderCards() {
-  characters.forEach(character => {
+  allCharacters.forEach(character => {
     const card = document.createElement('div');
     card.className = 'catalog__card';
     card.innerHTML = `
@@ -156,7 +174,7 @@ function renderCards() {
 // Функция отображения информации о персонаже
 function renderInfo(character) {
   infoContainer.innerHTML = `
-    
+
    <div class="character">
    <div class="character__container">
    <div class="character__about">
@@ -178,9 +196,52 @@ function renderInfo(character) {
       </ul>
     </div>
    </div>
+   
   `;
 }
 
-
 // Запускаем рендер карточек
 renderCards();
+
+
+// Элементы формы
+// const searchInput  = document.getElementById('searchInput');
+// const searchButton = document.getElementById('searchButton');
+
+// // Обработчик нажатия на кнопку
+// searchButton.addEventListener('click', handleSearch);
+// // Поиск при нажатии Enter в поле ввода
+// searchInput.addEventListener('keyup', (e) => {
+//   if (e.key === 'Enter') handleSearch();
+// });
+
+// function handleSearch() {
+//   const query = searchInput.value.trim().toLowerCase();
+//   // фильтруем массив по имени
+//   const results = characters.filter((c) =>
+//     c.name.toLowerCase().includes(query)
+//   );
+  
+//   // очищаем список карточек
+//   listContainer.innerHTML = '';
+  
+//   if (results.length > 0) {
+//     // создаём карточки только для найденных персонажей
+//     results.forEach((character) => {
+//       const card = document.createElement('div');
+//       card.className = 'catalog__card';
+//       card.innerHTML = `
+//         <img src="${character.image}" alt="${character.name}">
+//         <h3>${character.name}</h3>
+//       `;
+//       card.addEventListener('click', () => {
+//         renderInfo(character);
+//       });
+//       listContainer.appendChild(card);
+//     });
+//   } else {
+//     // если нет совпадений
+//     listContainer.innerHTML = '<p>No characters found</p>';
+//     infoContainer.innerHTML = '';
+//   }
+// }

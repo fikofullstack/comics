@@ -40,9 +40,14 @@
        
     }
     &__characters{
-        color: $brown;
+        color: $dark;
+      
     }
     &__comics{
         color: $dark;
+      
     }
+}
+.active{
+    color: $brown;
 }
