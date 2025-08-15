@@ -1,0 +1,130 @@
+@use "/src/sass/variables.scss" as *;
+@use "/src/sass/mixins.scss" as *;
+
+.rondom {
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        width: 38%;
+        height: 250px;
+        border: 1px solid $light;
+        background-color: $light;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+
+    }
+
+    &__img {
+
+        img {
+            width: 180px;
+            height: 180px;
+            margin: 35px 30px 35px 40px;
+        }
+    }
+
+    &__name {
+        display: block;
+        width: 51px;
+        height: 29px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+        color: $dark;
+        margin-top: 35px;
+        margin-bottom: 10px;
+
+        &-text {
+            display: block;
+            width: 265px;
+            height: 90px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            color: $dark;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        width: 232px;
+        height: 38px;
+        gap: 30px;
+
+        &-red {
+            background: $brown;
+            width: 101px;
+            height: 38px;
+
+        }
+
+        &-silver {
+            background-color: $silver;
+            width: 101px;
+            height: 38px;
+
+        }
+    }
+
+    &__try {
+        position: relative;
+        width: 40%;
+        height: 250px;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+        background: $dark;
+        padding: 35px 0 35px 40px;
+
+        &-text {
+            display: block;
+            width: 490px;
+            height: 60px;
+            font-weight: 700;
+            font-size: 24px;
+            color: $light;
+
+        }
+
+        &-text1 {
+            width: 231px;
+            height: 30px;
+            margin-top: 33px;
+        }
+
+        &-btn {
+            display: block;
+            background-color: $brown;
+            width: 101px;
+            height: 38px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            text-align: center;
+            margin-top: 24px;
+
+        }
+    }
+
+    &__myolnir {
+        position: absolute;
+        width: 135px;
+        height: 135px;
+        transform: rotate(300.4deg);
+        bottom: 54px;
+        left: 470px;
+    }
+
+    &__shield {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        right: 97px;
+        bottom: 14px;
+
+    }
+}

@@ -1,9 +1,7 @@
 @use '/src/sass/header.scss';
 @use '/src/sass/rondom.scss';
-
-
-
-
+@use '/src/sass/catalog.scss';
+@use '/src/sass/mixins.scss' as *;
 
 
 
@@ -21,6 +19,9 @@
 }
 
 .container {
-    padding: 50px 174px 0px 166px;
+    padding: 50px 190px 0px 190px;
+}
+.btn{
+    @include button;
 }
 
