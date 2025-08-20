@@ -1,1 +1,28 @@
 @use "../variables.scss" as *;
+
+.avangers {
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+        background-color: $dark;
+        color: $light;
+        align-items: center;
+        padding-inline: 80px;
+
+        &-img1 {
+            img {
+                width: 150px;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__img {
+        display: flex;
+        gap: 83px;
+        align-items: center;
+    }
+}

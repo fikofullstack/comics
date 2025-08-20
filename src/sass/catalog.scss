@@ -1,4 +1,5 @@
 @use "/src/sass/variables.scss" as *;
+@use "/src/sass/mixins.scss" as *;
 
 .catalog {
     display: flex;
@@ -18,10 +19,10 @@
         cursor: pointer;
         background: black;
         color: white;
-        // padding: 10px;   
         text-align: center;
         width: 250px;
         height: 321px;
+        
 
 
         img {
@@ -42,15 +43,11 @@
 
     &__info {
         display: flex;
-        position: absolute;
         width: 425px;
         height: 763px;
         background: $light;
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
-        top: 0;
-        // right: 16%;
-        transform: translateY(58%);
-
+        margin-bottom: 30px;
 
         h2 {
             margin-bottom: 10px;
@@ -77,26 +74,94 @@
             padding-top: 10px;
             padding-inline: 20px;
         }
+
         &-wrapper {
-          position: relative;
+            position: absolute;
+            transform: translateX(-150px);
         }
     }
 
-    &__search-wrapper {
-        position: absolute;
+    &__search {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        inset: 0;
-        // right: 0%;
-        // bottom: 8%;
         width: 425px;
-        height: 127px;
+        height: 763px;
+        background: $light;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 30px;
+
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 425px;
+            height: 127px;
+            padding: 22px 24px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+            gap: 16px;
+            border-radius: 6px;
+            position: relative;
+            z-index: 15;
+            display: flex;
+            background-color: #fff;
+
+        }
+
+        &-input {
+            // flex: 1 1 auto;
+            height: 44px;
+            padding: 0 14px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+            font-size: 14px;
+            color: #222;
+
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+
+            &::placeholder {
+                color: #a9a9a9;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: rgba($brown, 0.55);
+                box-shadow:
+                    0 0 0 3px rgba($brown, 0.18),
+                    inset 0 2px 4px rgba(0, 0, 0, .06);
+            }
+        }
+
+        &-btn {
+            width: 101px;
+            height: 44px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            background: $brown;
+            border: none;
+
+            &:hover {
+                background: $dark;
+            }
+
+            &:active {
+                transform: translateY(1px);
+            }
+
+            &:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba($brown, .25);
+            }
+        }
     }
 
-
-
+    &__wrapper {
+        display: flex;
+    }
 }
+
 
 .character {
     &__container {
@@ -153,8 +218,53 @@
             background: rgba(255, 255, 255, 1);
             font-weight: 400;
             font-size: 14px;
-
-
         }
     }
 }
+
+.lead {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__btn {
+        width: 170px;
+        height: 38px;
+        background-color: $brown;
+        border-width: 1px;
+        margin: 55px 0 55px 0;
+    }
+
+    &__bg {
+        background-image: url("/src/img/lead/ironman.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 100% auto;
+        position: absolute;
+        right: -188px;
+        bottom: -129px;
+        z-index: -10;
+        width: 467px;
+        height: 372px;
+        transform: scaleX(-1);
+    }
+    &__wrapper{
+        width: 100%;
+    }
+}
+.catalog__card {
+    transition: transform .2s, box-shadow .2s;
+    cursor: pointer;
+  }
+  
+  /* стиль подсветки для найденного элемента */
+  .catalog__card.highlight,
+  .catalog__card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  }
+  
+  
