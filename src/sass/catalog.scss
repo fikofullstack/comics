@@ -255,16 +255,6 @@
         width: 100%;
     }
 }
-.catalog__card {
-    transition: transform .2s, box-shadow .2s;
-    cursor: pointer;
-  }
-  
-  /* стиль подсветки для найденного элемента */
-  .catalog__card.highlight,
-  .catalog__card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,.2);
-  }
-  
-  
+
+
+ 
