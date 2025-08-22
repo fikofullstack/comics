@@ -12,8 +12,8 @@ export default defineConfig({
 			input: {
 				main: resolve(__dirname, "index.html"),
 				comics: resolve(__dirname, "comics.html"),
-				about: "",
-				blog: "",
+				comicsifo: resolve(__dirname, "comicsinfo.html"),
+				comicsinfo2: resolve(__dirname, "comicsinfo2.html"),
 			},
 		},
 	},
