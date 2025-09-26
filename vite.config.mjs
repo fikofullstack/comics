@@ -14,6 +14,7 @@ export default defineConfig({
 				comics: resolve(__dirname, "comics.html"),
 				comicsifo: resolve(__dirname, "comicsinfo.html"),
 				comicsinfo2: resolve(__dirname, "comicsinfo2.html"),
+				
 			},
 		},
 	},

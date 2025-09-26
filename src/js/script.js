@@ -2,7 +2,7 @@ import "/src/sass/style.scss";
 const characters = [{
   id: 1,
   name: "Abyss",
-  image: "../src/img/abyys.jpg",
+  image: "/abyys.jpg",
   description:
     "Nils Styger, известный как Abyss — мутант из Геноши с портально-измерительными способностями (втягивает предметы в «пустоту» внутри тела). Связан с Азазелем и Найткраулером, участвовал в событиях арки The Draco.",
   comics: [
@@ -16,7 +16,7 @@ const characters = [{
 {
   id: 2,
   name: "Loki",
-  image: "./src/img/loki.jpg", // обязательно с расширением
+  image: "/loki.jpg", // обязательно с расширением
   description: "In Norse mythology, Loki is a god or jötunn (or both). Loki is the son of Fárbauti and Laufey, and the brother of Helblindi and Býleistr. By the jötunn Angrboða, Loki is the father of Hel, the wolf Fenrir, and the world serpent Jörmungandr. By Sigyn, Loki is the father of Nari and/or Narfi and with the stallion Svaðilfari as the father, Loki gave birth—in the form of a mare—to the eight-legged horse Sleipnir. In addition, Loki is referred to as the father of Váli in the Prose Edda.",
   comics: [
     "Avengers: The Initiative (2007) #19",
@@ -34,7 +34,7 @@ const characters = [{
 {
   id: 3,
   name: "Adam Warlock",
-  image: "src/img/adam_black.jpg",
+  image: "/adam_black.jpg",
   description:
     "Космический защитник, созданный как   «Him» и переродившийся в Adam Warlock. Носитель Soul Gem, ключевая фигура саг о Бесконечности и Стражах Галактики.",
   comics: [
@@ -49,7 +49,7 @@ const characters = [{
 {
   id: 4,
   name: "Boom Boom",
-  image: "src/img/boob.jpg",
+  image: "/boob.jpg",
   description:
     "Tabitha Smith, также Boomer/Time Bomb, создаёт взрывающиеся энергетические «пузырьки». Была в X‑Factor, New Mutants и X‑Force; позже — участница Nextwave.",
   comics: [
@@ -63,7 +63,7 @@ const characters = [{
 {
   id: 5,
   name: "Calypso",
-  image: "src/img/cally.jpg",
+  image: "/cally.jpg",
   description:
     "Калипсо Эзили — колдунья‑вуду и противница Человека‑Паука, часто манипулирует Ящером и связана с Кравеном-охотником.",
   comics: [
@@ -76,7 +76,7 @@ const characters = [{
 {
   id: 6,
   name: "Colleen Wing",
-  image: "src/img/collen.jpg",
+  image: "/collen.jpg",
   description:
     "Мастер меча и боевых искусств, союзница Дэнни Рэнда. Половина дуэта Daughters of the Dragon, участница Heroes for Hire.",
   comics: [
@@ -90,7 +90,7 @@ const characters = [{
 {
   id: 7,
   name: "Daimon Hellstrom",
-  image: "src/img/demon.jpg",
+  image: "/demon.jpg",
   description:
     "Daimon Hellstrom — «Сын Сатаны»: мистик‑экзорцист, владеющий адским огнём. Балансирует между героизмом и тёмным наследием.",
   comics: [
@@ -104,7 +104,7 @@ const characters = [{
 {
   id: 8,
   name: "Damage Control",
-  image: "src/img/damage.jpg",
+  image: "/damage.jpg",
   description:
     "Частная компания Marvel, занимающаяся уборкой и восстановлением городов после супергеройских битв; часто попадает в абсурдные ситуации.",
   comics: [
@@ -117,7 +117,7 @@ const characters = [{
 {
   id: 9,
   name: "HULK",
-  image: "../src/img/hulk.jpg",
+  image: "/hulk.jpg",
   description:
     "Брюс Бэннер превращается в Халка — сверхсильного зелёного гиганта. От трагедии эксперимента с гамма‑бомбой до саг «Планета Халк» и «Мировая война Халка».",
   comics: [
@@ -201,4 +201,5 @@ function renderInfo(character) {
 
 // Запускаем рендер карточек
 renderCards();
+
 
