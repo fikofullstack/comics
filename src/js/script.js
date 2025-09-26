@@ -2,7 +2,7 @@ import "/src/sass/style.scss";
 const characters = [{
   id: 1,
   name: "Abyss",
-  image: "src/img/catalog/abyss.jpg",
+  image: "/src/img/catalog/abyss.jpg",
   description:
     "Nils Styger, известный как Abyss — мутант из Геноши с портально-измерительными способностями (втягивает предметы в «пустоту» внутри тела). Связан с Азазелем и Найткраулером, участвовал в событиях арки The Draco.",
   comics: [
@@ -16,7 +16,7 @@ const characters = [{
 {
   id: 2,
   name: "Loki",
-  image: "src/img/catalog/loki.jpg", // обязательно с расширением
+  image: "./src/img/catalog/loki.jpg", // обязательно с расширением
   description: "In Norse mythology, Loki is a god or jötunn (or both). Loki is the son of Fárbauti and Laufey, and the brother of Helblindi and Býleistr. By the jötunn Angrboða, Loki is the father of Hel, the wolf Fenrir, and the world serpent Jörmungandr. By Sigyn, Loki is the father of Nari and/or Narfi and with the stallion Svaðilfari as the father, Loki gave birth—in the form of a mare—to the eight-legged horse Sleipnir. In addition, Loki is referred to as the father of Váli in the Prose Edda.",
   comics: [
     "Avengers: The Initiative (2007) #19",
@@ -40,7 +40,7 @@ const characters = [{
   comics: [
     "Fantastic Four (1961) #66–67",
     "Marvel Premiere (1972) #1–2",
-    "Warlock (1972) #9–15",
+    "Warlock (1972) #9–15", 
     "Infinity Gauntlet (1991) #1",
     "Warlock and the Infinity Watch (1992) #1",
     "Guardians of the Galaxy (2008) #25"
